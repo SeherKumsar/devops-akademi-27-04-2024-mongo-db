@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: social-app
-          image: social-app:v12
+          image: social-app:v13
           ports:
             - containerPort: 3000
