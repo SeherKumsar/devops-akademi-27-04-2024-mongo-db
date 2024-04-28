@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: social-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: social-app
+  template:
+    metadata:
+      labels:
+        app: social-app
+    spec:
+      containers:
+        - name: social-app
+          image: social-app:v6
+          ports:
+            - containerPort: 3000
