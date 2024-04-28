@@ -6,7 +6,7 @@ const app = express();
 app.get("/posts/:id", async (req, res) => {
   const { id } = req.params;
   const [rows] = await dbConnection.execute(
-    "SELECT * FROM posts WHERE id = ?",
+    "SELECT postName, postData, created_by FROM posts WHERE id = ?",
     [id]
   );
   res.json(rows);
